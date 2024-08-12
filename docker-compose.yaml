@@ -1,0 +1,11 @@
+# docker-compose down --rmi all --volumes --remove-orphans
+
+services:
+  go:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/usr/src/app
